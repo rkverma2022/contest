@@ -1,11 +1,4 @@
-import plotly.graph_objects as go
-
-fig = go.Figure(go.Bar(
-            x=df['specialisation'].value_counts(),
-            y=['Mkt&Fin', 'Mkt&HR'],
-            orientation='h'))
-fig.update_layout(
-autosize=False,
-width=500,
-height=250)
-fig.show()
+for r in range(215):
+    if df['salary'][r] == '':
+        df['salary'][r] = 0
+df['salary'][214] = 0
